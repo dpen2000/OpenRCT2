@@ -337,7 +337,7 @@ void WindowResearchDevelopmentPagePaint(rct_window* w, rct_drawpixelinfo* dpi, W
         {
             // TODO: Should probably use game date format setting
             ft.Add<StringId>(STR_RESEARCH_EXPECTED_FORMAT);
-            ft.Add<StringId>(DateDayNames[gResearchExpectedDay]);
+            ft.Add<StringId>(gResearchDaysRemaining);
             ft.Add<StringId>(DateGameMonthNames[gResearchExpectedMonth]);
         }
         else
