@@ -113,7 +113,7 @@ extern uint8_t gResearchFundingLevel;
 extern uint8_t gResearchPriorities;
 extern uint16_t gResearchProgress;
 extern uint8_t gResearchProgressStage;
-extern uint8_t gResearchDaysRemaining;
+extern int32_t gResearchDaysRemaining;
 extern uint8_t gResearchExpectedMonth;
 extern uint8_t gResearchExpectedDay;
 extern std::optional<ResearchItem> gResearchLastItem;
