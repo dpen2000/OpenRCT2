@@ -60,6 +60,8 @@ jobs:
       - name: Git describe for shallow checkout
         id: ghd
         uses: proudust/gh-describe@v1
+        with:
+          default: "dp"
       - name: Update GA environment
         run: echo "OPENRCT2_DESCRIBE=${{ steps.ghd.outputs.describe }}" >> $GITHUB_ENV
       - name: Install MSVC problem matcher
