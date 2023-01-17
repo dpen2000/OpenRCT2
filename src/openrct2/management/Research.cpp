@@ -54,6 +54,7 @@ uint8_t gResearchProgressStage;
 std::optional<ResearchItem> gResearchLastItem;
 uint8_t gResearchExpectedMonth;
 uint8_t gResearchExpectedDay;
+int32_t gResearchDaysRemaining;
 std::optional<ResearchItem> gResearchNextItem;
 
 std::vector<ResearchItem> gResearchItemsUninvented;
@@ -117,6 +118,7 @@ static void research_calculate_expected_date()
         int32_t expectedMonth = DateGetMonth(gDateMonthsElapsed + dayQuotient + (daysRemaining >> 16));
         expectedDay = (dayRemainder * days_in_month[expectedMonth]) >> 16;
 
+        gResearchDaysRemaining = daysRemaining;
         gResearchExpectedDay = expectedDay;
         gResearchExpectedMonth = expectedMonth;
     }
